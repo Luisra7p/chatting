@@ -1,17 +1,3 @@
-// Load the http module to create an http server.
-var http = require('http');
-
-// Configure our HTTP server to respond with Hello World to all requests.
-var server = http.createServer(function (request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.end("Hello World\n");
-});
-
-// Listen on port 8000, IP defaults to 127.0.0.1
-server.listen(8000);
-
-// Put a friendly message on the terminal
-console.log("Server running at http://127.0.0.1:8000/");
 
 /*
 Copyright (C) 2013 Hélio Dolores (heliodolores[at]gmail.com)
@@ -21,7 +7,7 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
+*/
 var Chat;
 (function (Chat) {
     (function (ChatStatusServer) {
@@ -1114,5 +1100,5 @@ var Utils;
 // process.env.PORT
 // process.env.IP
 // RED HAT OPEN SHIFT CONFIGURATION
-//var myserver = new Chat.ChatServer(process.env.OPENSHIFT_NODEJS_PORT, false, "luisechevarria@outsystemscloud.com", process.env.OPENSHIFT_NODEJS_IP, false, "_*outsystemschatkey*_", "aspx");
-//# sourceMappingURL=server.js.map
+var myserver = new Chat.ChatServer(process.env.process.env.PORT, false, "luisechevarria@outsystemscloud.com", process.env.IP, false, "_*outsystemschatkey*_", "aspx");
+sourceMappingURL=server.js.map
